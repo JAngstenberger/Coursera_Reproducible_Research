@@ -20,9 +20,6 @@ Sum steps by day, create Histogram, and calculate mean and median.
 Steps_Sum <- aggregate(steps ~ date, Activity_Data_noNA, sum)
 # create histogram
 hist(Steps_Sum$steps, main="Total Num of Steps per day", col="grey", xlab="Number of Steps")
-```
-
-```{r}
 # calculate mean steps per day
 steps_mean <- mean(Steps_Sum$steps)
 print(sprintf("Mean total steps taken per day: %f ", steps_mean))
